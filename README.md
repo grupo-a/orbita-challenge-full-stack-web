@@ -9,7 +9,7 @@ Será solicitado o desenvolvimento de uma Aplicação que realize a Matrícula d
 
 # Especificações Técnicas
 - **Front End:** [Vuetifyjs](https://vuetifyjs.com/en/)  como framework de UI
-- **API:** Express e NodeJS
+- **API:** .netCore, C# e Entity framework
 - **Banco de Dados:** Postgress ou MySQL
 - **Idioma de escrita do código:** Inglês
 
