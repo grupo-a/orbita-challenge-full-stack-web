@@ -14,7 +14,7 @@ namespace backend.Models
         [Required(ErrorMessage = "The RA is required")]
         public string Ra { get; set; }
         [Required(ErrorMessage = "The CPF is required")]
-        [MinLength(11, ErrorMessage = "CPF must have 11 digits"), MaxLength(11, ErrorMessage = "CPF must have 11 digits")]
+        [RegularExpression("^([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2})|([0-9]{11})|([0-9]{9}-[0-9]{2})$", ErrorMessage = "CPF must have 11 digits")]
         public string Cpf { get; set; }
 
     }
