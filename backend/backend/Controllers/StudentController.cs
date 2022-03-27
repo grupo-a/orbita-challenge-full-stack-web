@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using backend.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 
 namespace backend.Controllers
 {
@@ -7,10 +9,15 @@ namespace backend.Controllers
     [Route("[controller]")]
     public class StudentController : ControllerBase
     {
-        [HttpGet]
-        public string Create()
+        private static List<Student> students = new List<Student>();
+        private static int id = 1;
+
+        [HttpPost]
+        public IActionResult Create(Student student)
         {
-            return "ok";
+            student.Id = id++;
+            students.Add(student);
+            return Ok(student);
         }
     }
 }
