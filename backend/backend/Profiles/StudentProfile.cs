@@ -9,7 +9,8 @@ namespace backend.Profiles
         public StudentProfile()
         {
             CreateMap<CreateStudentDTO, Student>();
-           
+            CreateMap<UpdateStudentDTO, Student>();
+
         }
     }
 }
