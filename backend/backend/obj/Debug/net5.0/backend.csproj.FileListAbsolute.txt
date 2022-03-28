@@ -26,3 +26,14 @@ C:\grupoa\orbita-challenge-full-stack-web\backend\backend\obj\Debug\net5.0\refin
 C:\grupoa\orbita-challenge-full-stack-web\backend\backend\obj\Debug\net5.0\backend.pdb
 C:\grupoa\orbita-challenge-full-stack-web\backend\backend\obj\Debug\net5.0\backend.genruntimeconfig.cache
 C:\grupoa\orbita-challenge-full-stack-web\backend\backend\obj\Debug\net5.0\ref\backend.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\Humanizer.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\Npgsql.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\AutoMapper.dll
+C:\grupoa\orbita-challenge-full-stack-web\backend\backend\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
