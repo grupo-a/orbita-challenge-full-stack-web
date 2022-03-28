@@ -39,9 +39,9 @@ namespace backend.Controllers
         }
 
         [HttpGet]
-        public IActionResult FindAll()
+        public IEnumerable<Student> FindAll()
         {
-            return Ok(_context.Students);
+            return _context.Students;
         }
 
         [HttpGet("{id}")]
@@ -60,6 +60,19 @@ namespace backend.Controllers
                 return NotFound();
             }
             _mapper.Map(studentDTO, student);
+            _context.SaveChanges();
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            Student student = _context.Students.FirstOrDefault(student => student.Id == id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+            _context.Remove(student);
             _context.SaveChanges();
             return NoContent();
         }
