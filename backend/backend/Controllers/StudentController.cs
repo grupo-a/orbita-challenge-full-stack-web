@@ -50,5 +50,18 @@ namespace backend.Controllers
             Student student = _context.Students.FirstOrDefault(students => students.Id == id);
             return student != null ? Ok(student) : NotFound();
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] UpdateStudentDTO studentDTO)
+        {
+            Student student = _context.Students.FirstOrDefault(student => student.Id == id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(studentDTO, student);
+            _context.SaveChanges();
+            return NoContent();
+        }
     }
 }
