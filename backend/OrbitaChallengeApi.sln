@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{633E31C8-F56D-4CBE-83E2-C7A562199248}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{16AF8E15-28BE-49D4-A341-5D88BD05C35B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitaChallengeApi.Application.Tests", "tests\OrbitaChallengeApi.Application.Tests\OrbitaChallengeApi.Application.Tests.csproj", "{5A80313E-A5F4-40F8-8C02-4DEE75C1778D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrbitaChallengeApi.Application", "src\OrbitaChallengeApi.Application\OrbitaChallengeApi.Application.csproj", "{3098B902-3007-4DD6-90D5-2FDCE840CCD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A80313E-A5F4-40F8-8C02-4DEE75C1778D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A80313E-A5F4-40F8-8C02-4DEE75C1778D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A80313E-A5F4-40F8-8C02-4DEE75C1778D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A80313E-A5F4-40F8-8C02-4DEE75C1778D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3098B902-3007-4DD6-90D5-2FDCE840CCD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3098B902-3007-4DD6-90D5-2FDCE840CCD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3098B902-3007-4DD6-90D5-2FDCE840CCD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3098B902-3007-4DD6-90D5-2FDCE840CCD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A80313E-A5F4-40F8-8C02-4DEE75C1778D} = {16AF8E15-28BE-49D4-A341-5D88BD05C35B}
+		{3098B902-3007-4DD6-90D5-2FDCE840CCD1} = {633E31C8-F56D-4CBE-83E2-C7A562199248}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84CD52AF-14FF-455F-80CC-DE398270283F}
+	EndGlobalSection
+EndGlobal
