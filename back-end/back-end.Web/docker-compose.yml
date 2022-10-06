@@ -14,7 +14,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      - DOTNET_CONNECTION_STRING:@"server=localhost;database=StudentsDb;uid=root;password=123456;"
+      - DOTNET_CONNECTION_STRING:"server=localhost;database=students_db;uid=root;password=123456;"
   db:
     image: mysql:8.0.21
     container_name: db
