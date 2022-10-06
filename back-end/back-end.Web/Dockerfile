@@ -14,4 +14,4 @@ WORKDIR /app
 
 COPY --from=build-env /app/out .
 
-ENTRYPOINT ["dotnet", "NomeDaAplicacao.dll"]
+ENTRYPOINT ["dotnet", "back-end.Web.dll"]
