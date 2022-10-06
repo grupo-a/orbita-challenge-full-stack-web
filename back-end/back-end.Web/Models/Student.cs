@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace students_db.Models;
-public class Students
+public class Student
 {
     [Key]
     [Required(ErrorMessage="Required field")]
