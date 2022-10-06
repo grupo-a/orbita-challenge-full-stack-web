@@ -1,0 +1,32 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  backendweb:
+    image: backendweb
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3001:3001
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DOTNET_CONNECTION_STRING:@"server=localhost;database=StudentsDb;uid=root;password=123456;"
+  db:
+    image: mysql:8.0.21
+    container_name: db
+    platform: linux/x86_64
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    restart: 'always'
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      timeout: 10s
+      retries: 5
+    cap_add:
+      - SYS_NICE

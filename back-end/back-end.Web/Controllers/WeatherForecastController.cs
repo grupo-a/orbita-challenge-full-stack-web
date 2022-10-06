@@ -4,7 +4,7 @@ namespace back_end.Web.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class lController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
     {

@@ -18,21 +18,14 @@ services:
   backend:
     container_name: app_backend
     build: ./back-end/back-end.Web
-    # ports:
-    #   - 3001:3001
+    ports:
+      - 3001:3001
     working_dir: /app-backend
-    command: npm run dev:compose
-    volumes:
-      - ./back-end/back-end.Web:/app-backend
     depends_on:
       db:
         condition: service_healthy
     environment:
-      - DOTNET_CONNECTION_STRING:"server=localhost;database=StudentsDb;uid=root;password=123456;"
-    # healthcheck:
-    #   test: ['CMD', 'lsof', '-t', '-i:3001']
-    #   timeout: 10s
-    #   retries: 5
+      - DOTNET_CONNECTION_STRING:@"server=localhost;database=StudentsDb;uid=root;password=123456;"
   db:
     image: mysql:8.0.21
     container_name: db
