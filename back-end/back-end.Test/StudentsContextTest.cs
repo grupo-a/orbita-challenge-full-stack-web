@@ -3,13 +3,15 @@ using Microsoft.Extensions.DependencyInjection;
 using students_db.Models;
 using students_db.Repository;
 
+namespace students_data.Test;
+
 public class StudentsContextTest : StudentsContext
 {
     public DbSet<Student>? students;
 
-    public StudentsContextTest(DbContextOptions<StudentsContext> options)
-    : base(options)
-    {}
+    // public StudentsContextTest(DbContextOptions<StudentsContext> options)
+    // : base(options)
+    // {}
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
