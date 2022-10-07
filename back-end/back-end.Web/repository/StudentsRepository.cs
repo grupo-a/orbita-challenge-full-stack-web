@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using students_db.Models;
+using System.Threading.Tasks;
 
 namespace students_db.Repository;
 
@@ -11,9 +12,9 @@ public class StudentsRepository
         _context = context;
     }
 
-    public List<Student?> GetAll()
+    public async List<Student?> GetAll()
     {
-        return _context.Students.ToList();
+        return await _context.Students.ToListAsync();
     }
 
     public Student GetByPK(int ra)
