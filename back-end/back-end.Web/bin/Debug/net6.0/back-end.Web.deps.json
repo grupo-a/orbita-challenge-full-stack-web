@@ -37,6 +37,7 @@
           "Microsoft.AspNetCore.Mvc.Testing": "6.0.5",
           "Microsoft.EntityFrameworkCore": "6.0.9",
           "Microsoft.EntityFrameworkCore.Design": "6.0.9",
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.9",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.2",
           "Swashbuckle.AspNetCore": "6.2.3",
           "Microsoft.AspNetCore.Antiforgery": "6.0.0.0",
@@ -430,6 +431,11 @@
         },
         "compile": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/6.0.9": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "6.0.9"
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
@@ -2583,6 +2589,13 @@
       "sha512": "sha512-LAZHEvlgSg6OUzLUH3BoVneYrQj7cQqwwFnzSfwVGNjQvj5RRh7Vz0eSXLKfQD4xv5QuSm3l+MzFMZC1NBPQHw==",
       "path": "microsoft.entityframeworkcore.relational/6.0.9",
       "hashPath": "microsoft.entityframeworkcore.relational.6.0.9.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/6.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HqdzDohxXfh7onMfrKxI3qtRu+TF246dNVQ1Yjql7v69CfeKWFyRxLbuNG/ScGh9dZdXHDvNjqXb4Ou9GHflew==",
+      "path": "microsoft.entityframeworkcore.tools/6.0.9",
+      "hashPath": "microsoft.entityframeworkcore.tools.6.0.9.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "type": "package",

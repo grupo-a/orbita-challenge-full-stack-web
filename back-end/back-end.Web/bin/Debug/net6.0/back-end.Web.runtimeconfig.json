@@ -13,6 +13,8 @@
     ],
     "configProperties": {
       "System.GC.Server": true,
+      "System.Globalization.Invariant": true,
+      "System.Globalization.PredefinedCulturesOnly": true,
       "System.Reflection.NullabilityInfoContext.IsSupported": true,
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
     }
