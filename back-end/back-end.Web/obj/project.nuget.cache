@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "35JzwZ4I8p4+3CvAmSMhw2KMd1qdTnVCrWLk9gX9uhiy5PTamDWYKm077zCXpQcD2FR27w/0lJFYBp6orMePzg==",
+  "dgSpecHash": "zPCWWyh5RhV9r8Kq5qkAHs5DgsBOBruLZ/TjhQ9rG21M5J3KaRMKKVIEiH36AU/6PBu7zB0h6yNHD/nRIvFAgg==",
   "success": true,
   "projectFilePath": "/Users/macbook/project-CRUD-students/orbita-challenge-full-stack-web/back-end/back-end.Web/back-end.Web.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "/Users/macbook/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.9/microsoft.entityframeworkcore.analyzers.6.0.9.nupkg.sha512",
     "/Users/macbook/.nuget/packages/microsoft.entityframeworkcore.design/6.0.9/microsoft.entityframeworkcore.design.6.0.9.nupkg.sha512",
     "/Users/macbook/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.9/microsoft.entityframeworkcore.relational.6.0.9.nupkg.sha512",
+    "/Users/macbook/.nuget/packages/microsoft.entityframeworkcore.tools/6.0.9/microsoft.entityframeworkcore.tools.6.0.9.nupkg.sha512",
     "/Users/macbook/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/macbook/.nuget/packages/microsoft.extensions.caching.abstractions/6.0.0/microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "/Users/macbook/.nuget/packages/microsoft.extensions.caching.memory/6.0.1/microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
