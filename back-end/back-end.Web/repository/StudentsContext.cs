@@ -7,9 +7,9 @@ public class StudentsContext : DbContext
 {
     public DbSet<Student> Students { get; set; }
 
-    public StudentsContext(DbContextOptions<StudentsContext> options)
-    : base(options)
-    {}
+    // public StudentsContext(DbContextOptions<StudentsContext> options)
+    // : base(options)
+    // {}
     // public void ConfigureServices(IServiceCollection services)
     // {
     //     var connection = Environment.GetEnvironmentVariable("ConexaoMySql:MySqlConnectionString");
@@ -36,6 +36,6 @@ public class StudentsContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Student>()
-        .HasKey(s => s.RA);
+            .HasKey(s => s.RA);
     }
 }

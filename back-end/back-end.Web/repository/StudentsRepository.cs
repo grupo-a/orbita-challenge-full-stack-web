@@ -16,12 +16,12 @@ public class StudentsRepository
         return _context.Students.ToList();
     }
 
-    public Student GetById(int ra)
+    public Student GetByPK(int ra)
     {
         return _context.Students.Where(e => e.RA == ra).First();
     }
 
-    public Student Insert(Student student)
+    public Student Create(Student student)
     {
         _context.Add(student);
         _context.SaveChanges();
