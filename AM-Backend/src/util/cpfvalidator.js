@@ -3,7 +3,7 @@
  * @param {string} cpf - The CPF to be validated.
  * @return {boolean} Returns true if the CPF is valid, false otherwise.
  */
-function isCpfValid(cpf) {
+const isCpfValid = (cpf) => {
   // Remove non-digits
   cpf = cpf.replace(/\D/g, '');
 
@@ -52,6 +52,6 @@ function isCpfValid(cpf) {
   }
 
   return true;
-}
+};
 
 module.exports = isCpfValid;
