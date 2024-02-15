@@ -1,27 +1,22 @@
 const Sequelize = require('sequelize');
 const db = require('../util/database');
 
-const Student = db.define('student', {
-  ra: {
+const User = db.define('user', {
+  id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true,
+  },
+  username: {
+    type: Sequelize.STRING,
+    allowNull: false,
     unique: true,
   },
-  name: {
+  password: {
     type: Sequelize.STRING,
-    allowNull: false,
-  },
-  email: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  cpf: {
-    // eslint-disable-next-line new-cap
-    type: Sequelize.STRING(11),
     allowNull: false,
   },
 });
 
-module.exports = Student;
+module.exports = User;

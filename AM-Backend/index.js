@@ -18,8 +18,11 @@ app.get('/', (req, res, next) => {
   res.send('Test route is working');
 });
 
+// LOGIN route
+app.use('/login', require('./src/routes/auth.routes'));
 // CRUD routes
 app.use('/students', require('./src/routes/students.routes'));
+
 
 // Error Handling
 app.use((error, req, res, next) => {
