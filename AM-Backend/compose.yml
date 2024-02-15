@@ -1,0 +1,34 @@
+version: "4.27"
+
+services:
+  node_app:
+    container_name: academic-module
+    build: .
+    image: eddsonjr/academic-module
+    ports:
+      - "3000:3000"
+    environment:
+      - PG_DB=academic_module
+      - PG_USER=amdbuser
+      - PG_PASSWORD=!Q@W#E
+      - PG_HOST=node_db
+    restart: always
+    depends_on:
+      - node_db
+  
+  node_db:
+    container_name: node_db
+    image: postgres:16
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=academic_module
+      - POSTGRES_USER=amdbuser
+      - POSTGRES_PASSWORD=!Q@W#E
+    volumes:
+      - node_db_data:/var/lib/postgresql/data
+
+volumes:
+  node_db_data: {}
+
+
