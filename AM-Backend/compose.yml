@@ -12,6 +12,7 @@ services:
       - PG_USER=amdbuser
       - PG_PASSWORD=!Q@W#E
       - PG_HOST=node_db
+      - JWT_SECRET=E1d2u3c4a5c6a7o8rt
     restart: always
     depends_on:
       - node_db

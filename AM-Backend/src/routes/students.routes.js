@@ -1,6 +1,12 @@
 const controller = require('../controllers/students.controller');
+// eslint-disable-next-line max-len
+const jwtAuthenticationMiddleware = require('../middleware/jwt-authentication.middleware');
+
 // eslint-disable-next-line new-cap
 const router = require('express').Router();
+
+// JWT Authentication route
+router.use(jwtAuthenticationMiddleware);
 
 // CRUD Routes /students
 router.get('/', controller.getStudents);

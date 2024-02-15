@@ -1,6 +1,7 @@
 const Student = require('../models/student.model');
 const isCpfValid = require('../util/cpfvalidator');
 const isEmailValid = require('../util/emailvalidator');
+
 // CRUD Controllers
 
 // get all students
