@@ -9,10 +9,10 @@ services:
       - "3000:3000"
     environment:
       - PG_DB=academic_module
-      - PG_USER=amdbuser
-      - PG_PASSWORD=!Q@W#E
+      - PG_USER=
+      - PG_PASSWORD=
       - PG_HOST=node_db
-      - JWT_SECRET=E1d2u3c4a5c6a7o8rt
+      - JWT_SECRET=
     restart: always
     depends_on:
       - node_db
@@ -24,8 +24,8 @@ services:
       - "5432:5432"
     environment:
       - POSTGRES_DB=academic_module
-      - POSTGRES_USER=amdbuser
-      - POSTGRES_PASSWORD=!Q@W#E
+      - POSTGRES_USER=
+      - POSTGRES_PASSWORD=
     volumes:
       - node_db_data:/var/lib/postgresql/data
 
