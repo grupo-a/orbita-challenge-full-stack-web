@@ -9,7 +9,7 @@ exports.login = async (req, res) => {
   const user = await User.findOne({where: {username, password}});
 
   if (!user) {
-    return res.status(401).json({message: 'Invalid username or password'});
+    return res.sendStatus(401);
   }
 
   // Generate a JWT token

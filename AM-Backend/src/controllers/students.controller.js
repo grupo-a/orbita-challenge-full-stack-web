@@ -14,7 +14,7 @@ exports.getStudent = async (req, res, next) => {
   const studentId = req.params.studentId;
   const student = await Student.findByPk(studentId);
   if (!student) {
-    return res.status(404).json({message: 'Student not found!'});
+    return res.sendStatus(404);
   }
   res.status(200).json({student});
 };
@@ -33,10 +33,7 @@ exports.createStudent = async (req, res, next) => {
     email,
     cpf,
   });
-  res.status(201).json({
-    message: 'Student created successfully!',
-    student: newStudent,
-  });
+  res.status(201).json({newStudent});
 };
 
 // Update student
@@ -54,7 +51,7 @@ exports.updateStudent = async (req, res, next) => {
 
   const student = await Student.findByPk(studentId);
   if (!student) {
-    return res.status(404).json({message: 'Student not found'});
+    return res.sendStatus(404);
   }
 
   // Update name if provided
@@ -68,7 +65,7 @@ exports.updateStudent = async (req, res, next) => {
   }
 
   const updatedStudent = await student.save();
-  res.status(200).json({message: 'Student updated', student: updatedStudent});
+  res.status(200).json({updatedStudent});
 };
 
 // Delete a student
@@ -76,12 +73,12 @@ exports.deleteStudent = async (req, res, next) => {
   const studentId = req.params.studentId;
   const student = await Student.findByPk(studentId);
   if (!student) {
-    return res.status(404).json({message: 'Student not found!'});
+    return res.sendStatus(404);
   }
   await Student.destroy({
     where: {
       ra: studentId,
     },
   });
-  res.status(200).json({message: 'Student deleted!'});
+  res.sendStatus(204);
 };
