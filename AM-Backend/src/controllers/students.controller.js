@@ -1,5 +1,6 @@
 const Student = require('../models/student.model');
-
+const isCpfValid = require('../util/cpfvalidator');
+const isEmailValid = require('../util/emailvalidator');
 // CRUD Controllers
 
 // get all students
@@ -29,6 +30,19 @@ exports.createStudent = (req, res, next) => {
   const name = req.body.name;
   const email = req.body.email;
   const cpf = req.body.cpf;
+
+  // Check if CPF is valid
+  if (!isCpfValid(cpf)) {
+    return res.status(400).json({
+      message: 'Invalid CPF. Please provide a valid CPF.',
+    });
+  }
+  // Check if email is valid
+  if (!isEmailValid(email)) {
+    return res.status(400).json({
+      message: 'Invalid email. Please provide a valid email address.',
+    });
+  }
   Student.create({
     name,
     email,
@@ -56,8 +70,18 @@ exports.updateStudent = (req, res, next) => {
         if (!student) {
           return res.status(404).json({message: 'Student not found'});
         }
-        student.name = updatedName;
-        student.email = updatedEmail;
+        // Update name if provided
+        if (updatedName !== undefined) {
+          student.name = updatedName;
+        }
+        // Update email if provided and valid
+        if (updatedEmail !== undefined && isEmailValid(updatedEmail)) {
+          student.email = updatedEmail;
+        } else if (updatedEmail !== undefined && !isEmailValid(updatedEmail)) {
+          return res.status(400).json({
+            message: 'Invalid email. Please provide a valid email address.',
+          });
+        }
         return student.save();
       })
       .then((result) => {
@@ -65,6 +89,7 @@ exports.updateStudent = (req, res, next) => {
       })
       .catch((err) => console.log(err));
 };
+
 
 // delete a student
 exports.deleteStudent = (req, res, next) => {
