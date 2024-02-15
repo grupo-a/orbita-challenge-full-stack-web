@@ -10,6 +10,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "eslint": "^8.56.0",
     "eslint-config-google": "^0.14.0"
   },
