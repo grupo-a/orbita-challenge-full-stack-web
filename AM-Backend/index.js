@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const sequelize = require('./src/util/database');
-
+const apiVersion = '/v1';
 const app = express();
 
 app.use(bodyparser.json());
@@ -19,10 +19,9 @@ app.get('/', (req, res, next) => {
 });
 
 // LOGIN route
-app.use('/login', require('./src/routes/auth.routes'));
+app.use(apiVersion + '/login', require('./src/routes/auth.routes'));
 // CRUD routes
-app.use('/students', require('./src/routes/students.routes'));
-
+app.use(apiVersion + '/students', require('./src/routes/students.routes'));
 
 // Error Handling
 app.use((error, req, res, next) => {
